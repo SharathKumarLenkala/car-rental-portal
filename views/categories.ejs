@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Self Drive Car Rental System  </title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/categories_style.css">
+  </head>
+
+  <body>
+     <% include header.ejs %>
+
+    <div class="nav-1">
+       <% include user-navigation.ejs %>
+    </div>
+
+    <div class="page-content">
+        <% include site-navigation.ejs %>
+
+    <div class="article">
+       <% Object.keys(catalogData).forEach(function(key) { %>
+         <h4> <%= key %> </h4>
+           <table class="image-table">
+             <tr>
+               <% catalogData[key].forEach(function(obj){ %>
+               <td>
+                   <a href="/item?item-code=<%= obj.code %>" >
+                        <img class="t-image" src="<%= obj.imageUrl %>" alt="description here" />
+                   </a>
+               </td>
+               <% });%>
+             </tr>
+             <tr>
+              <% catalogData[key].forEach(function(obj){ %>
+                <td >
+                  <a href="/item?item-code=<%= obj.code %>" >
+                     <%= obj.name %>
+                  </a>
+                </td>
+              <% });%>
+            </tr>
+          </table>
+       <%});%>
+     </div>
+</div>
+
+    <% include footer.ejs %>
+  </body>
+</html>

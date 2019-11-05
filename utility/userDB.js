@@ -1,0 +1,1 @@
+user = require('../models/user');

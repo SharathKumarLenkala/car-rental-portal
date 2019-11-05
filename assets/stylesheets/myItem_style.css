@@ -1,0 +1,211 @@
+* {box-sizing: border-box;}
+
+nav {
+  float: left;
+  width: 15%;
+  height: 100%;
+  background: #B0C4DE;
+  border: 1px solid black;
+}
+
+nav ul {
+  list-style-type: none;
+  padding:0;
+}
+
+nav li {
+  padding-bottom: 5%;
+  padding-left: 2%;
+  font-size: 1vw;
+}
+
+
+.logged-user {
+  float:right;
+  overflow: auto;
+  padding-top: 0%;
+  top: 0;
+  padding-right: 1%;
+}
+
+.article ul {
+  list-style-type: none;
+}
+
+.article li{
+  padding-bottom: 1%;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 130%;
+}
+
+.page-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article {
+  background-color: silver;
+  overflow:auto;
+  height:85%;
+  padding-left: 1%;
+  font-size: 1.2vw;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+  width:100%;
+  height: 10%;
+  background-color: #B0C4DE;
+  justify-content: center;
+  padding-left: 40%;
+  font-size: 2vh;
+  margin-bottom: 0.5%;
+  color: black;
+  border: 1px solid black;
+}
+
+.footer {
+  height: 5%;
+  background-color: grey;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid black;
+  font-size: 2vh;
+}
+
+.page-content {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+      background-color: silver;
+}
+
+img {
+  height:10%;
+  width:14%;
+  float:left;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.nav-1 {
+  height:7%;
+  width:100%;
+  margin-bottom: 0.5%;
+  text-align: center;
+}
+
+.nav-horizontal {
+  width: 100%;
+  height:100%;
+  background: #B0E0E6;
+}
+
+.nav-horizontal ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-horizontal ul a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-horizontal ul li{
+  display: inline;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  background-color: #42ea63;
+  border: none;
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width:70%;
+}
+
+th {
+  text-align: left;
+  border-bottom: 4px solid #ddd;
+  padding-top:1%;
+}
+
+td {
+  text-align: left;
+  padding-top:1%;
+}
+
+.ratings-bar {
+  padding: 0;
+}
+
+.ratings-bar li{
+  list-style-type: none;
+  display: inline;
+}
+
+.star {
+  width:1vw;
+  height:1vw;
+}
+
+.my-item-tag li{
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+}
+
+.my-item-tag {
+
+  padding:0;
+}
+
+
+
+.cartag {
+  width:20px;
+  height:20px;
+}
+
+.footer-two {
+  height: 15%;
+  background-color: silver;
+  padding:0;
+  color: black;
+  padding-left: 1%;
+  overflow: hidden;
+  font-size: 2.4vh;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+  color: green;
+  background-color: green;
+}
+
+
+h2{
+  color: #00007b;
+}

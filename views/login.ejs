@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Self Drive Car Rental System  </title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/login_style.css">
+  </head>
+  <body>
+	<% include header.ejs %>
+
+    <div class="nav-1">
+      <% include user-navigation.ejs %>
+    </div>
+
+    <div class="page-content">
+      <% include site-navigation.ejs %>
+
+      <div class="article">
+        <div class="content">
+          <p><strong>Welcome to Movecar Rental System </strong></p>
+              <p>sign in to Rent a Car </p>
+        </div>
+        <div>
+          <form action="/user/authentication" method="post">
+            <div class="form-data">
+              <input type="text" name="username" placeholder="username">
+            </div>
+            <div class="form-data">
+              <input type="password" name="password" placeholder="password">
+            </div>
+            <div class="form-data">
+              <button type="submit" name="signin-button" class="button">sign in</button>
+
+              <% if(error != 0 && error == 1){ %>
+                <p class="error"> either username or password is incorrect, please enter correct details </p>
+              <% } %>
+              <% if(error != 0 && error == 2){ %>
+                <p class="error"> Please enter valid username and Password(username should be email adress and password should be between 5 and 16 characters)  </p>
+              <% } %>
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+      <% include footer.ejs %>
+
+  </body>
+</html>

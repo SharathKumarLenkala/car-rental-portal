@@ -1,0 +1,135 @@
+* {box-sizing: border-box;}
+
+nav {
+  float: left;
+  width: 15%;
+  height: 100%;
+  background: #B0C4DE;
+  border: 1px solid black;
+}
+
+h2 {
+ font-size: 150%;}
+
+nav ul {
+  list-style-type: none;
+  padding:0;
+ // font-size: 150%;
+}
+
+nav li {
+  padding-bottom: 5%;
+  padding-left: 2%;
+  font-size: 1vw;
+}
+
+.article ul {
+  list-style-type: none;
+}
+
+.article li{
+  padding-bottom: 1%;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 150%;
+}
+
+
+.page-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article {
+  background-color: silver;
+  overflow:auto;
+  font-size: 1.5vw;
+  padding: 1%;
+  line-height: 48%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+  width:100%;
+  height: 10%;
+  background-color: #B0C4DE;
+  justify-content: center;
+  padding-left: 40%;
+  font-size: 2vh;
+  margin-bottom: 0.5%;
+  color: black;
+  border: 1px solid black;
+}
+
+.footer {
+  height: 5%;
+  background-color: grey;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid black;
+  font-size: 2vh;
+}
+
+.page-content {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+    background-color: silver;
+}
+
+img {
+  height:10%;
+  width:14%;
+  float:left;
+}
+
+.logged-user {
+  float:right;
+  overflow: auto;
+  padding-top: 0%;
+  top: 0;
+  padding-right: 1%;
+}
+.clearfix {
+  overflow: auto;
+}
+
+.nav-1 {
+  height:7%;
+  width:100%;
+  margin-bottom: 0.5%;
+  text-align: center;
+}
+
+.nav-horizontal {
+  width: 100%;
+  height:100%;
+  background: #B0E0E6;
+}
+
+.nav-horizontal ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-horizontal ul a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-horizontal ul li{
+  display: inline;
+}

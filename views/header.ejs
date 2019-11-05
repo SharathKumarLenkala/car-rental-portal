@@ -1,0 +1,9 @@
+<header class="header">
+  <div class="clearfix">
+      <%if (typeof user === "undefined") {%> <p class="logged-user">not signed in</p> <%}%>
+      <%if (typeof user !== "undefined") {%> <p class="logged-user">welcome <strong> <%= user.User_id %> </strong> </p> <%}%>
+      <img alt="logo" src="../assets/images/logo.png" />
+
+    <h2>Online Car Rental System</h2>
+  </div>
+</header>

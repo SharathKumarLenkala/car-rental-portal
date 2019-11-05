@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Self Drive Car Rental System  </title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/item_style.css">
+  </head>
+  <body>
+     <% include header.ejs %>
+    <div class="nav-1">
+       <% include user-navigation.ejs %>
+    </div>
+
+    <div class="page-content">
+      <% include site-navigation.ejs %>
+      <div class="article">
+	       <ul class="breadcrumb">
+           <li><a href = "/categories">Home  </a> </li>
+           <li>></li>
+           <li><a href = "/categories">Categories  </a> </li>
+           <li>></li>
+           <li> <a> <%= item.name %>  </a> </li>
+         </ul>
+
+      <div class="image-container">
+
+          <img alt="item image" class="image_ht" src="<%= item.imageUrl %>" />
+          <div class="image-side-description">
+            <p><strong><%= item.name %></strong></p>
+            <p><%= item.category %></p>
+        </div>
+      </div>
+
+        <div class="image-container-buttons">
+          <form>
+            <%if (checkItem === 0) {%>
+              <button formaction="/profile/save" class="button" type= "submit" >
+                <img alt="heart-image" class="button-image" src="../assets/images/like.jpg">
+                Book Car
+              </button>
+            <%}%>
+            <%if (checkItem === 1) {%>
+              <button class="button" type="submit" formaction="/feedback">
+                <img alt="star-image" class="button-image" src="../assets/images/fav.jpg">
+                Rate Car
+              </button>
+            <%}%>
+            <input value="<%= item.code %>" name="item-code" type="hidden" />
+          </form>
+          <p><%= item.description %></p>
+      </div>
+
+    <h4>Specifications:</h4>
+    <p> <%= item.specification %> </p> <br>
+
+    <div class="button_back">
+      <form>
+        <button formaction="/item" class="button" type= "submit" >
+            Back to Categories
+        </button>
+      </form>
+    </div>
+    <% include footer.ejs %>
+  </div>
+</div>
+  </body>
+</html>

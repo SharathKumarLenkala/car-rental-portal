@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Self Drive Car Rental System  </title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/myItem_style.css">
+  </head>
+  <body>
+    <% include header.ejs %>
+
+    <div class="nav-1">
+       <% include user-navigation.ejs %>
+    </div>
+
+    <div class="page-content">
+       <% include site-navigation.ejs %>
+
+      <div class="article">
+        <h2>Your Bookings</h2>
+        <br /> <br />
+        <table>
+          <tr>
+            <th>Car</th>
+            <th>Car Type</th>
+            <th>My Rating</th>
+            <th>Tested</th>
+            <th></th>
+            <th></th>
+          </tr>
+      <% for(var i=0;i<data.length;i++){ %>
+          <tr>
+            <td>
+              <ul class="my-item-tag">
+                <%if (data[i].madeIt === "true") {%>  <li><img  alt="my tag image" class="my-tag" src="../assets/images/cartag.png" /></li>  <%}%>
+                <li><a href=""> <%= data[i].item %> </a></li>
+              </ul>
+            </td>
+            <td><%= data[i].category %></td>
+            <td>
+              <ul class="ratings-bar">
+                <% var stars = parseInt(data[i].rating);
+                  for(let i=0; i<stars ; i++) {
+                %>
+                   <li> <img alt="star" class="star" src="../assets/images/star-image.png" /> </li>
+                 <% } %>
+              </ul>
+            </td>
+            <td>
+              <%if (data[i].madeit === "true") {%> <input type="checkbox" class="tested-checkbox" name="tested" value="tested" checked  onclick="this.checked=!this.checked;"> <%}%>
+              <%if (data[i].madeit === "false") {%> <input type="checkbox" class="tested-checkbox" name="tested" value="tested" onclick="this.checked=!this.checked;"> <%}%>
+            </td>
+            <td>
+              <form action="/feedback">
+                <input type="hidden" name="item-code" value="<%= data[i].code %>" />
+                <button class="button" type= "submit" >Update</button>
+              </form>
+            </td>
+            <td>
+              <form action="/profile/delete" method="post">
+                <input type="hidden" name="item-code" value="<%= data[i].code %>" />
+                <button class="button" type= "submit" >Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+
+      <footer class="footer-two">
+        <ul class="my-item-tag">
+          <li><img alt="my tag image" class="cartag" src="../assets/images/cartag.png" /></li>
+          <li>indicates that you booked this particular car for your trip</li>
+      </ul>
+        <p>click <a href="#">here</a> to share your desired car for any category</p>
+      </footer>
+    </div>
+
+    <% include footer.ejs %>
+
+  </body>
+</html>
